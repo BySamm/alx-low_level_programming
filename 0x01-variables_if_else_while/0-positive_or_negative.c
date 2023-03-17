@@ -14,7 +14,7 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	printf("%d \n", n);
+	printf("%d", n);
 	/* Chech if the scanned number */
 	if (n > 0)
 	{
