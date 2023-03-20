@@ -1,3 +1,4 @@
+#include <time.h>
 #include <stdio.h>
 
 /**
@@ -14,17 +15,13 @@ int main(void)
 	{
 		for (j = i + 1; j <= 98; j++)
 		{
-			putchar((i / 10) + 48);
-			putchar((i % 10) + 48);
+			putchar((i / 10) + '0');
+			putchar((i % 10) + '0');
 			putchar(' ');
-			putchar((j / 10) + 48);
-			putchar((j % 10) + 48);
-			if (i == 98 && j == 98)
-			{
-				continue;
-				putchar(',');
-				putchar(' ');
-			}
+			putchar((j / 10) + '0');
+			putchar((j % 10) + '0');
+			putchar(',');
+			putchar(' ');
 		}
 	}
 	putchar('\n');
