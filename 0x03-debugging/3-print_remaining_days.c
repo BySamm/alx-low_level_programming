@@ -14,7 +14,31 @@ void print_remaining_days(int month, int day, int year)
 {
 	if ((year % 4 == 0 || year % 400 == 0) && !(year % 100 == 0))
 	{
-		if ((month >= 1 && month <= 12) && (day <= 31 && day >= 1))
+		if ((month >= 2 && month <= 12) && (day <= 28 && day >= 1))
+		{
+			day++;
+		}
+		if ((month >= 6 && month <= 12) && (day <= 30 && day >= 1))
+		{
+			day++;
+		}
+		if ((month >= 11 && month <= 12) && (day <= 30 && day >= 1))
+		{
+			day++;
+		}
+		if (month == 1 && (day <= 31 && day >= 1))
+		{
+			day++;
+		}
+		if ((month >=3 && month <= 5) && (day <= 31 && day >= 1))
+		{
+			day++;
+		}
+		if ((month >= 7 && month <= 10) && (day <= 31 && day >= 1))
+		{
+			day++;
+		}
+		if (month == 12 && (day <= 31 && day >= 1))
 		{
 			day++;
 		}
