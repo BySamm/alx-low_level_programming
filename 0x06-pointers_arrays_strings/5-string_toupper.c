@@ -3,7 +3,7 @@
 
 /**
  * *string_toupper - Function to change lower to upper case string
- * @'': The pointer
+ * @str: The pointer
  * Return: 0
  */
 
