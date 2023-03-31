@@ -1,28 +1,22 @@
 #include "main.h"
 
 /**
- * reverse_array - Function to reverse value of an array
- * @a: Array pointer
- * @n: Number of element in array
- * Return: values of array
+ * reverse_array - Function to reverse arrays values
+ * @n: Number of elements in array
+ * @a: Container
+ * Return: 0
  */
 
 void reverse_array(int *a, int n)
 {
-	int i;
-	int b;
+	int *first = a;
+	int *last = a + n - 1;
+	int temp;
 
-	a = &a[n -1];
-	for (i = 0; i < n; i++)
+	while (first < last)
 	{
-		if (i != 0)
-		{
-			putchar(44);
-			putchar(' ');
-		}
-		b = *a--;
-		/*putchar(b);*/
-		printf("%d", b);
+		temp = *first;
+		*first++ = *last;
+		*last-- = temp;
 	}
-	putchar('\n');
 }
