@@ -10,7 +10,7 @@ char *leet(char *str)
 {
 	int i, j;
 	char move[] = "aAeEoOtTlL";
-	char with[] = "44330011";
+	char with[] = "4433007711";
 
 	i = 0;
 	while (str[i] != '\0')
@@ -19,13 +19,11 @@ char *leet(char *str)
 		{
 			if (str[i] == move[j])
 			{
-				str[i] = with[j];				
+				str[i] = with[j];
 			}
-			
 		}
 		i++;
-		
 	}
-	putchar('\n');
 	return (str);
+	putchar('\n');
 }
