@@ -18,6 +18,6 @@ void print_diagsums(int *a, int size)
 	{
 		L += a[i * size + i];
 		R += a[i * size + (size - 1 - i)];
-		printf("%d, %d\n", L, R);
 	}
+	printf("%d, %d\n", L, R);
 }
