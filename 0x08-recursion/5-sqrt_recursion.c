@@ -10,7 +10,6 @@
 int sub_sqrt_recursion(int a, int sqrt)
 {
 	/*sqrt = a * a;*/
-
 	if (a * a == sqrt)
 	{
 		return (a);
@@ -29,7 +28,7 @@ int sub_sqrt_recursion(int a, int sqrt)
  * _sqrt_recursion - Function to find a natural squareroot
  * @n: The number
  * Return: The result
- *i
+ */
 
 int _sqrt_recursion(int n)
 {
