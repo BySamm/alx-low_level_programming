@@ -5,12 +5,12 @@
  * str_concat - Function to concatenate two string an allocate memory
  * @s1: String one
  * @s2: String two
- * Report: NULL or pointer
+ * Return: NULL or pointer
  */
 
 char *str_concat(char *s1, char *s2)
 {
-	int i,j,x = 0, y = 0;
+	int i, j, x = 0, y = 0;
 	char *both;
 
 	while (s1[x] != '\0')
@@ -25,6 +25,18 @@ char *str_concat(char *s1, char *s2)
 	if (both == NULL)
 	{
 		return (NULL);
+	}
+	if (s1 == NULL)
+	{
+		return (s2);
+	}
+	if (s2 == NULL)
+	{
+		return (s1);
+	}
+	if (s1 && s2 == NULL)
+	{
+		return (" ");
 	}
 	for (i = 0; i < x; i++)
 	{
