@@ -8,10 +8,33 @@
  * Report: NULL or pointer
  */
 
-str_concat(char *s1, char *s2)
+char *str_concat(char *s1, char *s2)
 {
-	(void)s1;
-	(void)s2;
-	return (0);
-}
+	int i,j,x = 0, y = 0;
+	char *both;
 
+	while (s1[x] != '\0')
+	{
+		x++;
+	}
+	while (s2[y] != '\0')
+	{
+		y++;
+	}
+	both = malloc((x + y) * sizeof(char) + 1);
+	if (both == NULL)
+	{
+		return (NULL);
+	}
+	for (i = 0; i < x; i++)
+	{
+		both[i] = s1[i];
+	}
+	for (j = 0; j < y; j++)
+	{
+		both[i + j] = s2[j];
+	}
+	both[i + j] = '\0';
+	return (both);
+	free(both);
+}
