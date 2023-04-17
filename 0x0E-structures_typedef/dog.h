@@ -9,6 +9,7 @@
  * @owner: Owner of the puppy
  * Description: The structure will be use to display the above info
  */
+
 struct dog
 {
 	char *name;
@@ -17,4 +18,9 @@ struct dog
 };
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
+
+/* dog_t - New type as a new name of struct dog */
+
+typedef struct dog dog_t;
+
 #endif
