@@ -10,7 +10,37 @@
 
 int **alloc_grid(int width, int height)
 {
-	(void)width;
-	(void)height;
-	return (0);
+	int i, j;
+	int **mem;
+
+	if (height <= 0 || width <= 0)
+	{
+		return (NULL);
+	}
+	mem = malloc(height * sizeof(int *));
+	if (mem == NULL)
+	{
+		return (NULL);
+	}
+	for (i = 0; i < height; i++)
+	{
+		mem = malloc(width * sizeof(int *));
+		if (mem == NULL)
+		{
+			for (i = height; i >= 0; i--)
+			{
+				free(mem[i]);
+			}
+			free(mem);
+			return (NULL);
+		}
+	}
+	for (i = 0; i < height; i++)
+	{
+		for (j = 0; j < width; j++)
+		{
+			mem[i][j] = 0;
+		}
+	}
+	return (mem);
 }
