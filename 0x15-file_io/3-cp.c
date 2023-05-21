@@ -24,7 +24,7 @@ char *create_buf(char *file)
 }
 
 /**
- * close - Close the file
+ * close_f - Close the file
  * @fd: The file descriptor
  */
 void close_f(int fd)
