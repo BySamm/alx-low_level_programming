@@ -13,8 +13,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t file;
 	ssize_t wr;
 	ssize_t rd;
-	file = open(filename, O_RDONLY);
 
+	file = open(filename, O_RDONLY);
 	if (file == -1)
 	{
 		return (0);
