@@ -5,16 +5,16 @@
  * dlistint_t linked list
  *
  * @h: head of the list
- * @idx: index of the new node
+ * @index: index of the new node
  * Return: 1 if it succeeded, -1 if it failed
  */
-int delete_dnodeint_at_index(dlistint_t **h, unsigned int idx)
+int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	dlistint_t *h1;
 	dlistint_t *h2;
 	unsigned int i;
 
-	h1 = *h;
+	h1 = *head;
 
 	if (h1 != NULL)
 		while (h1->prev != NULL)
@@ -24,13 +24,13 @@ int delete_dnodeint_at_index(dlistint_t **h, unsigned int idx)
 
 	while (h1 != NULL)
 	{
-		if (i == idx)
+		if (i == index)
 		{
 			if (i == 0)
 			{
-				*h = h1->next;
-				if (*h != NULL)
-					(*h)->prev = NULL;
+				*head = h1->next;
+				if (*head != NULL)
+					(*head)->prev = NULL;
 			}
 			else
 			{
