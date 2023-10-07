@@ -16,14 +16,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t  *bucket, *new_node;
 
 	if (!ht || !key || !*key || !value)
-	{
 		return (0);
-	}
 	valuecopy = strdup(value);
 	if (!valuecopy)
-	{
 		return (0);
-	}
 	index = key_index((const unsigned char *)key, ht->size);
 	bucket = ht->array[index];
 	while (bucket)
