@@ -1,1 +1,1 @@
-The repo for low level programming starting with C
+The repository for low level programming starting with C
